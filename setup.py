@@ -24,7 +24,7 @@ PKG_REQUIRES = [
     'docutils==0.14',
     'idna==2.7',
     'pkginfo==1.4.2',
-    'psutil==5.4.7',
+    'psutil==5.6.6',
     'Pygments==2.2.0',
     'readme-renderer==24.0',
     'requests==2.20.0',
