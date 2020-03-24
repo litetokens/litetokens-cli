@@ -16,7 +16,7 @@ PKG_AUTHOR = ', '.join(['Weiyu X'])
 PKG_SCRIPTS = ['tron-cli']
 PKG_VERSION = '0.1.4'
 PKG_REQUIRES = [
-    'bleach==3.0.2',
+    'bleach==3.1.2',
     'cbox==0.5.0',
     'certifi==2018.10.15',
     'chardet==3.0.4',
