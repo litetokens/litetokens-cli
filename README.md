@@ -29,7 +29,15 @@ A command line tool, to quick set up, turn on/off (multiple) litetokens nodes(fu
 
 * Project on [Pypi](https://pypi.org/project/litetokenscli/)
 
+## Build
+
+> python3 setup.py build
+
 ## Install
+
+> sudo python3 setup.py install
+
+OR
 
 ### pip
 
