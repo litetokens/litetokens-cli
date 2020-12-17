@@ -47,9 +47,9 @@ class Init(object):
         """
         get release url
         """
-        url = JAVA_TRON_RELEASES_URL
+        url = JAVA_LITETOKENS_RELEASES_URL
         if version == 'lastest':
-            url += 'Odyssey-v' + JAVA_TRON_LASTEST_VERSION
+            url += 'Odyssey-v' + JAVA_LITETOKENS_LASTEST_VERSION
         elif '3.1.3' <= version <= '3.1.3':
             url += 'Odyssey-v' + version
             self.source_full_jar = 'java-litetokens.jar'
