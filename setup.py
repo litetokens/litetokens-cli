@@ -48,7 +48,7 @@ PKG_REQUIRES = [
     'tqdm==4.28.1',
     'litetokenscli==0.1.3',
     'twine==1.12.1',
-    'urllib3==1.24',
+    'urllib3==1.24.2',
     'webencodings==0.5.1'
 ]
 
