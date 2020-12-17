@@ -1,24 +1,33 @@
-# TRON-CLI
+# LITETOKENS-CLI
 ```
- _________  ____  _  __    _______   ____
-/_  __/ _ \/ __ \/ |/ /___/ ___/ /  /  _/
- / / / , _/ /_/ /    /___/ /__/ /___/ /  
-/_/ /_/|_|\____/_/|_/    \___/____/___/
+#
+#
+#   ██▓     ██▓▄▄▄█████▓▓█████▄▄▄█████▓ ▒█████   ██ ▄█▀▓█████  ███▄    █   ██████ 
+#  ▓██▒    ▓██▒▓  ██▒ ▓▒▓█   ▀▓  ██▒ ▓▒▒██▒  ██▒ ██▄█▒ ▓█   ▀  ██ ▀█   █ ▒██    ▒ 
+#  ▒██░    ▒██▒▒ ▓██░ ▒░▒███  ▒ ▓██░ ▒░▒██░  ██▒▓███▄░ ▒███   ▓██  ▀█ ██▒░ ▓██▄   
+#  ▒██░    ░██░░ ▓██▓ ░ ▒▓█  ▄░ ▓██▓ ░ ▒██   ██░▓██ █▄ ▒▓█  ▄ ▓██▒  ▐▌██▒  ▒   ██▒
+#  ░██████▒░██░  ▒██▒ ░ ░▒████▒ ▒██▒ ░ ░ ████▓▒░▒██▒ █▄░▒████▒▒██░   ▓██░▒██████▒▒
+#  ░ ▒░▓  ░░▓    ▒ ░░   ░░ ▒░ ░ ▒ ░░   ░ ▒░▒░▒░ ▒ ▒▒ ▓▒░░ ▒░ ░░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░
+#  ░ ░ ▒  ░ ▒ ░    ░     ░ ░  ░   ░      ░ ▒ ▒░ ░ ░▒ ▒░ ░ ░  ░░ ░░   ░ ▒░░ ░▒  ░ ░
+#    ░ ░    ▒ ░  ░         ░    ░      ░ ░ ░ ▒  ░ ░░ ░    ░      ░   ░ ░ ░  ░  ░  
+#      ░  ░ ░              ░  ░            ░ ░  ░  ░      ░  ░         ░       ░  
+#                                                                                 
+#
 ```
 
-A command line tool, to quick set up, turn on/off (multiple) tron nodes(full/solidity), and monitor running status.
+A command line tool, to quick set up, turn on/off (multiple) litetokens nodes(full/solidity), and monitor running status.
 
 | Python | JDK |
 |--------|-----|
 | 3.7+   | 1.8 |
 
-* Learn more about tron on [TRON Developer Hub](https://developers.tron.network/docs/full-node)
+* Learn more about litetokens on [LITETOKENS Developer Hub](https://developers.litetokens.org/docs/full-node)
 
-* Join the community on [TRON Discord](https://discord.gg/GsRgsTD)
+* Join the community on [LITETOKENS Discord](https://discord.gg/GsRgsTD)
 
-* Source code on [Github](https://github.com/tronprotocol/tron-cli)
+* Source code on [Github](https://github.com/litetokens/litetokens-cli)
 
-* Project on [Pypi](https://pypi.org/project/troncli/)
+* Project on [Pypi](https://pypi.org/project/litetokenscli/)
 
 ## Install
 
@@ -27,7 +36,7 @@ A command line tool, to quick set up, turn on/off (multiple) tron nodes(full/sol
 > pip install --upgrade pip
 
 ```
-pip install troncli
+pip install litetokenscli
 ```
 
 #### FAQs on installation
@@ -56,10 +65,10 @@ pip install troncli
     . ./venv/bin/activate
     ```
 
-    c. install troncli in venv
+    c. install litetokenscli in venv
 
     ```
-    pip install troncli
+    pip install litetokenscli
     ```
 
     d. when done testing, or using the venv - to deactivate venv
@@ -72,20 +81,20 @@ pip install troncli
 
 | Command                                                                              | Functions                          | Example1        | Example2                                                                                                      |
 |--------------------------------------------------------------------------------------|------------------------------------|-----------------|---------------------------------------------------------------------------------------------------------------|
-| tron-cli init --version                                                              | Init dirs and fetch code.          | tron-cli init   | tron-cli init --version 3.1.3                                                                                 |
-| tron-cli config --nettype --fullhttpport --solhttpport --fullgrpcport --solgrpcport  | Create and customize config files. | tron-cli config | tron-cli config --nettype main --fullhttpport 8500 --solhttpport 8600 --fullgrpcport 50051 --solgrpcport 5001 |
-| tron-cli run --nodetype                                                              | Run node.                          | tron-cli run    | tron-cli run --nodetype sol                                                                                   |
-| tron-cli stop --pid                                                                  | Stop node.                         | tron-cli stop   | tron-cli stop --pid 7777                                                                                      |
-| tron-cli status --node                                                               | Monitor nodes status.              | tron-cli status | tron-cli status --node 777                                                                                    |
-| tron-cli quick                                                                       | Quick start.                       | tron-cli quick  | tron-cli quick                                                                                                |
-| tron-cli -h, --help                                                                  | Check help manual.                 | tron-cli -h     | tron-cli --help                                                                                               |
+| litetokens-cli init --version                                                              | Init dirs and fetch code.          | litetokens-cli init   | litetokens-cli init --version 3.1.3                                                                                 |
+| litetokens-cli config --nettype --fullhttpport --solhttpport --fullgrpcport --solgrpcport  | Create and customize config files. | litetokens-cli config | litetokens-cli config --nettype main --fullhttpport 8500 --solhttpport 8600 --fullgrpcport 50051 --solgrpcport 5001 |
+| litetokens-cli run --nodetype                                                              | Run node.                          | litetokens-cli run    | litetokens-cli run --nodetype sol                                                                                   |
+| litetokens-cli stop --pid                                                                  | Stop node.                         | litetokens-cli stop   | litetokens-cli stop --pid 7777                                                                                      |
+| litetokens-cli status --node                                                               | Monitor nodes status.              | litetokens-cli status | litetokens-cli status --node 777                                                                                    |
+| litetokens-cli quick                                                                       | Quick start.                       | litetokens-cli quick  | litetokens-cli quick                                                                                                |
+| litetokens-cli -h, --help                                                                  | Check help manual.                 | litetokens-cli -h     | litetokens-cli --help                                                                                               |
 #### overall
 
 ```
-tron-cli -h
+litetokens-cli -h
 ```
 ```
-usage: tron-cli [-h] {init,config,run,stop,status,quick} ...
+usage: litetokens-cli [-h] {init,config,run,stop,status,quick} ...
 
 which subcommand do you want?
 
@@ -105,23 +114,23 @@ subcommands:
 ##### subcommand: init
 
 ```
-tron-cli init -h
+litetokens-cli init -h
 ```
 ```
-usage: tron-cli init [-h] [--version VERSION]
+usage: litetokens-cli init [-h] [--version VERSION]
 
 optional arguments:
   -h, --help         show this help message and exit
-  --version VERSION  specify java-tron version
+  --version VERSION  specify java-litetokens version
 ```
 
 ##### subcommand: config
 
 ```
-tron-cli config -h
+litetokens-cli config -h
 ```
 ```
-usage: tron-cli config [-h] [--nettype NETTYPE] [--fullhttpport FULLHTTPPORT]
+usage: litetokens-cli config [-h] [--nettype NETTYPE] [--fullhttpport FULLHTTPPORT]
                        [--solhttpport SOLHTTPPORT] [--fullrpcport FULLRPCPORT]
                        [--solrpcport SOLRPCPORT] [--enablememdb ENABLEMEMDB]
 
@@ -142,10 +151,10 @@ optional arguments:
 ##### subcommand: run
 
 ```
-tron-cli run -h
+litetokens-cli run -h
 ```
 ```
-usage: tron-cli run [-h] [--nodetype NODETYPE]
+usage: litetokens-cli run [-h] [--nodetype NODETYPE]
 
 optional arguments:
   -h, --help           show this help message and exit
@@ -155,10 +164,10 @@ optional arguments:
 ##### subcommand: stop
 
 ```
-tron-cli stop -h
+litetokens-cli stop -h
 ```
 ```
-usage: tron-cli stop [-h] --pid PID
+usage: litetokens-cli stop [-h] --pid PID
 
 optional arguments:
   -h, --help  show this help message and exit
@@ -168,10 +177,10 @@ optional arguments:
 ##### subcommand: status
 
 ```
-tron-cli status -h
+litetokens-cli status -h
 ```
 ```
-usage: tron-cli status [-h] [--node NODE]
+usage: litetokens-cli status [-h] [--node NODE]
 
 optional arguments:
   -h, --help   show this help message and exit

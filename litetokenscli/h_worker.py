@@ -1,9 +1,24 @@
+#!/usr/bin/env python3
+#
+#
+#   ██▓     ██▓▄▄▄█████▓▓█████▄▄▄█████▓ ▒█████   ██ ▄█▀▓█████  ███▄    █   ██████ 
+#  ▓██▒    ▓██▒▓  ██▒ ▓▒▓█   ▀▓  ██▒ ▓▒▒██▒  ██▒ ██▄█▒ ▓█   ▀  ██ ▀█   █ ▒██    ▒ 
+#  ▒██░    ▒██▒▒ ▓██░ ▒░▒███  ▒ ▓██░ ▒░▒██░  ██▒▓███▄░ ▒███   ▓██  ▀█ ██▒░ ▓██▄   
+#  ▒██░    ░██░░ ▓██▓ ░ ▒▓█  ▄░ ▓██▓ ░ ▒██   ██░▓██ █▄ ▒▓█  ▄ ▓██▒  ▐▌██▒  ▒   ██▒
+#  ░██████▒░██░  ▒██▒ ░ ░▒████▒ ▒██▒ ░ ░ ████▓▒░▒██▒ █▄░▒████▒▒██░   ▓██░▒██████▒▒
+#  ░ ▒░▓  ░░▓    ▒ ░░   ░░ ▒░ ░ ▒ ░░   ░ ▒░▒░▒░ ▒ ▒▒ ▓▒░░ ▒░ ░░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░
+#  ░ ░ ▒  ░ ▒ ░    ░     ░ ░  ░   ░      ░ ▒ ▒░ ░ ░▒ ▒░ ░ ░  ░░ ░░   ░ ▒░░ ░▒  ░ ░
+#    ░ ░    ▒ ░  ░         ░    ░      ░ ░ ░ ▒  ░ ░░ ░    ░      ░   ░ ░ ░  ░  ░  
+#      ░  ░ ░              ░  ░            ░ ░  ░  ░      ░  ░         ░       ░  
+#                                                                                 
+#
+
 import os
 import subprocess
 import json
 
-from troncli import utils
-from troncli.constants import *
+from litetokenscli import utils
+from litetokenscli.constants import *
 
 
 class Worker:
@@ -18,9 +33,9 @@ class Worker:
         utils.success_msg('node running at pid:')
         utils.msg(str(pid))
         utils.info_msg('To stop this node:')
-        utils.msg('tron-cli stop --pid ' + str(pid))
+        utils.msg('litetokens-cli stop --pid ' + str(pid))
         utils.info_msg('To check node running details:')
-        utils.msg('tron-cli status --node ' + str(pid))
+        utils.msg('litetokens-cli status --node ' + str(pid))
         await self.nodes_list(node_type, pid, 'add')
 
     async def stop(self, pid):

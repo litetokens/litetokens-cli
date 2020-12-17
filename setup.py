@@ -1,4 +1,19 @@
-"""The setup.py file for Tron CLI."""
+#!/usr/bin/env python3
+#
+#
+#   ██▓     ██▓▄▄▄█████▓▓█████▄▄▄█████▓ ▒█████   ██ ▄█▀▓█████  ███▄    █   ██████ 
+#  ▓██▒    ▓██▒▓  ██▒ ▓▒▓█   ▀▓  ██▒ ▓▒▒██▒  ██▒ ██▄█▒ ▓█   ▀  ██ ▀█   █ ▒██    ▒ 
+#  ▒██░    ▒██▒▒ ▓██░ ▒░▒███  ▒ ▓██░ ▒░▒██░  ██▒▓███▄░ ▒███   ▓██  ▀█ ██▒░ ▓██▄   
+#  ▒██░    ░██░░ ▓██▓ ░ ▒▓█  ▄░ ▓██▓ ░ ▒██   ██░▓██ █▄ ▒▓█  ▄ ▓██▒  ▐▌██▒  ▒   ██▒
+#  ░██████▒░██░  ▒██▒ ░ ░▒████▒ ▒██▒ ░ ░ ████▓▒░▒██▒ █▄░▒████▒▒██░   ▓██░▒██████▒▒
+#  ░ ▒░▓  ░░▓    ▒ ░░   ░░ ▒░ ░ ▒ ░░   ░ ▒░▒░▒░ ▒ ▒▒ ▓▒░░ ▒░ ░░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░
+#  ░ ░ ▒  ░ ▒ ░    ░     ░ ░  ░   ░      ░ ▒ ▒░ ░ ░▒ ▒░ ░ ░  ░░ ░░   ░ ▒░░ ░▒  ░ ░
+#    ░ ░    ▒ ░  ░         ░    ░      ░ ░ ░ ▒  ░ ░░ ░    ░      ░   ░ ░ ░  ░  ░  
+#      ░  ░ ░              ░  ░            ░ ░  ░  ░      ░  ░         ░       ░  
+#                                                                                 
+#
+
+"""The setup.py file for Litetokens CLI."""
 
 import sys
 
@@ -11,9 +26,9 @@ def cat(files, join_str=''):
     return join_str.join(files_content)
 
 
-PKG_NAME = 'troncli'
+PKG_NAME = 'litetokenscli'
 PKG_AUTHOR = ', '.join(['Weiyu X'])
-PKG_SCRIPTS = ['tron-cli']
+PKG_SCRIPTS = ['litetokens-cli']
 PKG_VERSION = '0.1.4'
 PKG_REQUIRES = [
     'bleach==3.0.2',
@@ -31,24 +46,24 @@ PKG_REQUIRES = [
     'requests-toolbelt==0.8.0',
     'six==1.11.0',
     'tqdm==4.28.1',
-    'troncli==0.1.3',
+    'litetokenscli==0.1.3',
     'twine==1.12.1',
     'urllib3==1.24',
     'webencodings==0.5.1'
 ]
 
-PKG_DESC = 'A command line tool to monitor and manage tron nodes.'
+PKG_DESC = 'A command line tool to monitor and manage litetokens nodes.'
 PKG_LONG_DESC = cat(['README.md', 'CHANGELOG.md'], u'\n\n')
 
 setup(
     name=PKG_NAME,
     version=PKG_VERSION,
     author=PKG_AUTHOR,
-    author_email='weiyu@tron.network',
+    author_email='weiyu@litetokens.network',
     description=PKG_DESC,
     long_description=PKG_LONG_DESC,
     long_description_content_type='text/markdown',
-    url='https://github.com/tronprotocol/tron-cli',
+    url='https://github.com/litetokensprotocol/litetokens-cli',
     packages=find_packages(),
     zip_safe=False,
     scripts=PKG_SCRIPTS,

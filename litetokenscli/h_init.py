@@ -1,8 +1,23 @@
+#!/usr/bin/env python3
+#
+#
+#   ██▓     ██▓▄▄▄█████▓▓█████▄▄▄█████▓ ▒█████   ██ ▄█▀▓█████  ███▄    █   ██████ 
+#  ▓██▒    ▓██▒▓  ██▒ ▓▒▓█   ▀▓  ██▒ ▓▒▒██▒  ██▒ ██▄█▒ ▓█   ▀  ██ ▀█   █ ▒██    ▒ 
+#  ▒██░    ▒██▒▒ ▓██░ ▒░▒███  ▒ ▓██░ ▒░▒██░  ██▒▓███▄░ ▒███   ▓██  ▀█ ██▒░ ▓██▄   
+#  ▒██░    ░██░░ ▓██▓ ░ ▒▓█  ▄░ ▓██▓ ░ ▒██   ██░▓██ █▄ ▒▓█  ▄ ▓██▒  ▐▌██▒  ▒   ██▒
+#  ░██████▒░██░  ▒██▒ ░ ░▒████▒ ▒██▒ ░ ░ ████▓▒░▒██▒ █▄░▒████▒▒██░   ▓██░▒██████▒▒
+#  ░ ▒░▓  ░░▓    ▒ ░░   ░░ ▒░ ░ ▒ ░░   ░ ▒░▒░▒░ ▒ ▒▒ ▓▒░░ ▒░ ░░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░
+#  ░ ░ ▒  ░ ▒ ░    ░     ░ ░  ░   ░      ░ ▒ ▒░ ░ ░▒ ▒░ ░ ░  ░░ ░░   ░ ▒░░ ░▒  ░ ░
+#    ░ ░    ▒ ░  ░         ░    ░      ░ ░ ░ ▒  ░ ░░ ░    ░      ░   ░ ░ ░  ░  ░  
+#      ░  ░ ░              ░  ░            ░ ░  ░  ░      ░  ░         ░       ░  
+#                                                                                 
+#
+
 import os
 import shutil
 
-from troncli import utils
-from troncli.constants import *
+from litetokenscli import utils
+from litetokenscli.constants import *
 
 
 class Init(object):
@@ -37,7 +52,7 @@ class Init(object):
             url += 'Odyssey-v' + JAVA_TRON_LASTEST_VERSION
         elif '3.1.3' <= version <= '3.1.3':
             url += 'Odyssey-v' + version
-            self.source_full_jar = 'java-tron.jar'
+            self.source_full_jar = 'java-litetokens.jar'
         elif '3.2.0' <= version <= '3.2.10':
             url += 'Odyssey-v' + version
         else:

@@ -1,8 +1,23 @@
+#!/usr/bin/env python3
+#
+#
+#   ██▓     ██▓▄▄▄█████▓▓█████▄▄▄█████▓ ▒█████   ██ ▄█▀▓█████  ███▄    █   ██████ 
+#  ▓██▒    ▓██▒▓  ██▒ ▓▒▓█   ▀▓  ██▒ ▓▒▒██▒  ██▒ ██▄█▒ ▓█   ▀  ██ ▀█   █ ▒██    ▒ 
+#  ▒██░    ▒██▒▒ ▓██░ ▒░▒███  ▒ ▓██░ ▒░▒██░  ██▒▓███▄░ ▒███   ▓██  ▀█ ██▒░ ▓██▄   
+#  ▒██░    ░██░░ ▓██▓ ░ ▒▓█  ▄░ ▓██▓ ░ ▒██   ██░▓██ █▄ ▒▓█  ▄ ▓██▒  ▐▌██▒  ▒   ██▒
+#  ░██████▒░██░  ▒██▒ ░ ░▒████▒ ▒██▒ ░ ░ ████▓▒░▒██▒ █▄░▒████▒▒██░   ▓██░▒██████▒▒
+#  ░ ▒░▓  ░░▓    ▒ ░░   ░░ ▒░ ░ ▒ ░░   ░ ▒░▒░▒░ ▒ ▒▒ ▓▒░░ ▒░ ░░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░
+#  ░ ░ ▒  ░ ▒ ░    ░     ░ ░  ░   ░      ░ ▒ ▒░ ░ ░▒ ▒░ ░ ░  ░░ ░░   ░ ▒░░ ░▒  ░ ░
+#    ░ ░    ▒ ░  ░         ░    ░      ░ ░ ░ ▒  ░ ░░ ░    ░      ░   ░ ░ ░  ░  ░  
+#      ░  ░ ░              ░  ░            ░ ░  ░  ░      ░  ░         ░       ░  
+#                                                                                 
+#
+
 import os
 import copy
 
-from troncli import utils, json_store
-from troncli.constants import *
+from litetokenscli import utils, json_store
+from litetokenscli.constants import *
 
 
 class Config:
@@ -108,11 +123,11 @@ class Config:
         if net_type == 'private':
             self.full_config[' genesis.block'][' witnesses'] = [{
                 ' address': 'TPL66VK2gCXNCD7EJg9pgJRfqcRazjhUZY',
-                ' url': 'http://tronstudio.com',
+                ' url': 'http://litetokensstudio.com',
                 ' voteCount': 10000}]
             self.sol_config[' genesis.block'][' witnesses'] = [{
                 ' address': 'TPL66VK2gCXNCD7EJg9pgJRfqcRazjhUZY',
-                ' url': 'http://tronstudio.com',
+                ' url': 'http://litetokensstudio.com',
                 ' voteCount': 10000}]
 
     async def set_db_version(self, enablememdb):

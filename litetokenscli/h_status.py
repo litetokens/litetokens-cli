@@ -1,4 +1,18 @@
 #!/usr/bin/env python3
+#
+#
+#   ██▓     ██▓▄▄▄█████▓▓█████▄▄▄█████▓ ▒█████   ██ ▄█▀▓█████  ███▄    █   ██████ 
+#  ▓██▒    ▓██▒▓  ██▒ ▓▒▓█   ▀▓  ██▒ ▓▒▒██▒  ██▒ ██▄█▒ ▓█   ▀  ██ ▀█   █ ▒██    ▒ 
+#  ▒██░    ▒██▒▒ ▓██░ ▒░▒███  ▒ ▓██░ ▒░▒██░  ██▒▓███▄░ ▒███   ▓██  ▀█ ██▒░ ▓██▄   
+#  ▒██░    ░██░░ ▓██▓ ░ ▒▓█  ▄░ ▓██▓ ░ ▒██   ██░▓██ █▄ ▒▓█  ▄ ▓██▒  ▐▌██▒  ▒   ██▒
+#  ░██████▒░██░  ▒██▒ ░ ░▒████▒ ▒██▒ ░ ░ ████▓▒░▒██▒ █▄░▒████▒▒██░   ▓██░▒██████▒▒
+#  ░ ▒░▓  ░░▓    ▒ ░░   ░░ ▒░ ░ ▒ ░░   ░ ▒░▒░▒░ ▒ ▒▒ ▓▒░░ ▒░ ░░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░
+#  ░ ░ ▒  ░ ▒ ░    ░     ░ ░  ░   ░      ░ ▒ ▒░ ░ ░▒ ▒░ ░ ░  ░░ ░░   ░ ▒░░ ░▒  ░ ░
+#    ░ ░    ▒ ░  ░         ░    ░      ░ ░ ░ ▒  ░ ░░ ░    ░      ░   ░ ░ ░  ░  ░  
+#      ░  ░ ░              ░  ░            ░ ░  ░  ░      ░  ░         ░       ░  
+#                                                                                 
+#
+
 import psutil
 import os
 import argparse
@@ -6,8 +20,8 @@ import datetime
 import socket
 import sys
 
-from troncli import utils
-from troncli.constants import *
+from litetokenscli import utils
+from litetokenscli.constants import *
 
 ACCESS_DENIED = ''
 NON_VERBOSE_ITERATIONS = 6
@@ -54,7 +68,7 @@ class Status(object):
                                                   RUNNING_NODE_LIST_FILE)
             utils.status_msg('Full-nodes', running_nodes['full'])
             utils.status_msg('Solidity-nodes', running_nodes['sol'])
-            utils.info_msg('To stop node: tron-cli stop --pid')
+            utils.info_msg('To stop node: litetokens-cli stop --pid')
         else:
             utils.warnning_msg('no running nodes')
 
