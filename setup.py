@@ -40,7 +40,7 @@ PKG_REQUIRES = [
     'idna==2.7',
     'pkginfo==1.4.2',
     'psutil==5.4.7',
-    'Pygments==2.2.0',
+    'Pygments==2.7.4',
     'readme-renderer==24.0',
     'requests==2.20.0',
     'requests-toolbelt==0.8.0',
